@@ -5,6 +5,7 @@
     background-color: pink;
     display: flex;
     justify-content: space-between;
+    align-item: center;
 }
 body{
     font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
