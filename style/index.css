@@ -2,10 +2,10 @@
 
 /* reset------ */
 .header{
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     justify-content: space-between;
-    align-item: center;
+    align-items: center;
 }
 body{
     font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
@@ -14,7 +14,16 @@ img{
     vertical-align: bottom;
 }
 
+/* var */
+:root{
+    --primary-color: #24b4d7;
+    --alpha-40: rgba(255, 255, 255, .4);
+}
+
 /* header----- */
+.header-head,.header-body,.header-foot{
+    padding: .6rem .8rem;
+}
 .header-foot{
     display: none;
 }
@@ -28,5 +37,76 @@ img{
 }
 
 .nav-li{
-    
+    margin-left: 1rem;
+}
+
+.nav-link{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+/* banner */
+.banner{
+    position: relative;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-head{
+    z-index: 2;
+    position: relative;
+    /* background-color: rgba(255, 255, 255, .5); */
+    padding: 5rem;
+    text-align: center;
+    background-image: linear-gradient(
+        -45deg, 
+        var(--alpha-40) 0%, 
+        var(--alpha-40) 25%, 
+        transparent 26%, 
+        transparent 50%,
+        var(--alpha-40) 51%, 
+        var(--alpha-40) 75%, 
+        transparent 76%, 
+        transparent 100%
+        );
+    background-size: 7px 7px;
+    color: var(--primary-color);
+}
+
+.banner-body{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.banner-title{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.banner-subtitle{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.banner-desc{
+    font-size: 2rem;
+}
+
+.banner-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
