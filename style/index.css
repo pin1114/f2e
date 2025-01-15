@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* reset------ */
+/* reset-------------- */
 .header{
     /* background-color: pink; */
     display: flex;
@@ -8,20 +8,25 @@
     align-items: center;
 }
 body{
-    /* font-family: Arial, Helvetica, "Noto Sans TC", sans-serif; */
-    font-family: "Noto Sans TC", serif;
+    font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
+    /* font-family: "Noto Sans TC", serif; */
 }
 img{
     vertical-align: bottom;
 }
+html{
+    scroll-behavior: smooth;
+}
 
-/* helper */
+/* helper------------- */
 .h-container-m{
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    max-width: var(--width-m);
 }
 
 .h-container-s{
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    max-width: var(--width-s);
 }
 
 .h-mx-auto{
@@ -54,13 +59,23 @@ img{
     background-size: 7px 7px;
 }
 
-/* var */
+.h-text-center{
+    text-align: center;
+}
+
+.h-text-right{
+    text-align: right;
+}
+
+/* var--------------------- */
 :root{
     --primary-color: #24b4d7;
     --alpha-40: rgba(255, 255, 255, .4);
+    --width-m: 1200px;
+    --width-s: 1000px;
 }
 
-/* ani */
+/* ani--------------------- */
 .ani-fade{
     opacity: 0;
     animation-name: fade;
@@ -119,7 +134,7 @@ img{
     }
 }
 
-/* header----- */
+/* header------------- */
 .header-head,.header-body,.header-foot{
     padding: .6rem .8rem;
 }
@@ -133,7 +148,7 @@ img{
     width: 100%;
 }
 
-/* nav */
+/* nav------------------ */
 .nav-btnWrap{
     display: none;
 }
@@ -155,7 +170,7 @@ img{
     text-decoration: underline;
 }
 
-/* banner */
+/* banner------------------- */
 .banner{
     position: relative;
     aspect-ratio: 16/9;
@@ -205,7 +220,7 @@ img{
     object-fit: cover;
 }
 
-/* section */
+/* section------------------ */
 .section{
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -280,7 +295,7 @@ img{
 }
 
 
-/* section-info -------- */
+/* section-info ----------------- */
 .section-info .section-container{
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +352,7 @@ img{
     margin-bottom: 4rem;
 }
 
-/* section-result */
+/* section-result------------------ */
 .section-result .section-head{
     text-align: center;
 }
@@ -347,7 +362,7 @@ img{
     margin-bottom: 4rem;
 }
 
-/* card----- */
+/* card---------------------------- */
 .card{
     background-color: white;
 }
@@ -379,7 +394,7 @@ img{
     line-height: 1.4;
 }
 
-/* result ----- */
+/* result ------------------- */
 .result{
     padding: 3rem;
     text-align: center;
@@ -395,4 +410,115 @@ img{
     font-size: 1.2rem;
     color: rgba(0, 0, 0, .3);
     margin-top: 1rem;
+}
+
+/* table-------------------------- */
+.tableWrap{
+    overflow: auto;
+}
+
+.table{
+    width: 100%;
+    background-color: #fff;
+}
+
+.table thead{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.table th, table td{
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.table th{
+    font-weight: 400;
+}
+
+/* .table td:first-child{
+    font-family: 600;
+} */
+
+.table-border th, .table-border td{
+    border: solid 1px #ccc;
+}
+
+.table-stripe tbody tr:nth-child(even){
+    background-color: #eee;
+}
+
+.table-hover tbody tr{
+    transition-duration: .3s;
+}
+
+.table-hover tbody tr:hover{
+    background-color: #ecf9fc;
+}
+
+.table-nowrap th, .table-nowrap td{
+    white-space: nowrap;
+}
+
+.table-size-m th, .table-size-m td{
+    font-size: 1.2rem;
+}
+
+/* footer-------------- */
+.footer{
+    background-color: #333;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-title{
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.5;
+}
+
+.footer-desc{
+    color: rgba(255, 255, 255, .6);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/* aside-------------- */
+.aside{
+    position: fixed;
+    bottom: 300px;
+    /* margin-left: 1200px; */
+    margin-left: calc(var(--width-m) + 30px);
+}
+
+/* social------------- */
+.social{
+    display: block;
+    padding: 1rem .7rem;
+    color: white;
+}
+
+.social-ig{
+    background-image: linear-gradient(45deg, #F9D401, #F00817, #7E39AE);
+}
+
+.social-fb{
+    background-color: #0864f7;
+}
+
+.social-x{
+    background-color: black;
+}
+
+.social-up{
+    color: rgba(0, 0, 0, .4);
+}
+
+@media screen and (max-width: 768px) {
+    .header-body{
+        display: none;
+    }
+
+    .header-foot{
+        display: block;
+    }
 }
