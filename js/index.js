@@ -26,8 +26,5 @@ $('#BtnBars').on('click', function(){
 
 $('#BtnXmark, .nav-link').on('click', function(){
     $('#HeaderBody').fadeOut();
-})
-
-$('#BtnXmark').on('click', function(){
     $('body').removeAttr('style')
 })
