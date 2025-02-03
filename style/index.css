@@ -1,12 +1,6 @@
 @charset "utf-8";
 
 /* reset-------------- */
-.header{
-    /* background-color: pink; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 body{
     font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
     /* font-family: "Noto Sans TC", serif; */
@@ -135,6 +129,14 @@ html{
 }
 
 /* header------------- */
+.header{
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: .3s;
+}
+
 .header-head,.header-body,.header-foot{
     padding: .6rem .8rem;
 }
@@ -150,7 +152,10 @@ html{
 
 .header-active{
     background-color: rgba(255, 255, 255, .7);
-    
+}
+
+.header-img-logo{
+    transition-duration: .3s;
 }
 
 .header-active .header-img-logo{
