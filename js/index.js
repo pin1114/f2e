@@ -21,8 +21,13 @@ $(window).on('scroll', function(){
 
 $('#BtnBars').on('click', function(){
     $('#HeaderBody').fadeIn();
+    $('body').css('overflow', 'hidden')
+})
+
+$('#BtnXmark, .nav-link').on('click', function(){
+    $('#HeaderBody').fadeOut();
 })
 
 $('#BtnXmark').on('click', function(){
-    $('#HeaderBody').fadeOut();
+    $('body').removeAttr('style')
 })
